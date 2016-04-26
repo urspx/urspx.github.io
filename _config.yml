@@ -6,10 +6,10 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: urs.px
+title: urs.px.blog
 email: urs.px@inventati.org
 description: > # this means to ignore newlines until "baseurl:"
-  urs.px
+  rants, mostly
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://urspx.github.io" # the base hostname & protocol for your site
 twitter_username: urspx

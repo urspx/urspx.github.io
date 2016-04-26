@@ -1,0 +1,83 @@
+
+body {
+  background-color: rgb(20,20,20);
+  font-family: "Helvetica Neue", "Helvetica", "Open Sans", sans-serif;
+  color: rgb(235,235,235);
+
+  font-size: 14px;
+  font-weight: 200;
+  font-feature-settings: normal;
+  font-size-adjust: auto;
+  text-rendering: geometricPrecision;
+
+  font-kerning: 0;
+  padding: 1em;
+}
+
+header {
+  border-bottom-style: solid;
+  border-bottom-color: rgb(235,235,235);
+  border-bottom-width: 1px;
+  padding-bottom: 1em;
+
+  margin-bottom: 1em;
+}
+
+header .links {
+
+}
+
+#name::after{
+  content: "";
+
+}
+
+#name:hover::after {
+  content: "// Patrick Riechert";
+  font-weight: 100;
+
+}
+
+.links {
+  margin-left: none;
+  padding-left: none;
+}
+
+.links li {
+  list-style: none;
+  padding-left: none;
+  margin-left: none;
+}
+
+.links li a {
+  text-decoration: none;
+  color: rgb(235,235,235);
+
+  transition: color .5s;
+
+}
+
+.links li a:hover {
+  color: rgba(255,255,255);
+
+  transition: color .5s;
+}
+
+article {
+  display: block;
+  box-sizing: border-box;
+  padding-top: .2em;
+  padding-bottom: .5em;
+  padding-left: 1em;
+  padding-right: 1em;
+  margin-bottom: 1em;
+
+
+  background-color: rgb(235,235,235);
+  color: rgb(50,50,50);
+}
+
+article h1 {
+  margin-top: none;
+  padding-top: none;
+}
