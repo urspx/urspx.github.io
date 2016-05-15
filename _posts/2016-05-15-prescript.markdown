@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Control"
+title:  "Prescript"
 date:   2016-05-15 18:25:00 +0200
-categories: Deleuze Control Discipline 
+categories: Deleuze Control Discipline
 
 ---
 
