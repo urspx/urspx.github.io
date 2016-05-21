@@ -8,4 +8,6 @@ permalink: /about/
 
 [photos on vsco](http://urspx.vsco.co)
 
+[photos on instagram](http://instagram.com/urspx)
+
 [sounds](https://soundcloud.com/urs-px)
