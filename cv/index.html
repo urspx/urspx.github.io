@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html prefix="og: https://ogp.me/ns#" lang="en">
+	<head>
+		<title>CV. Patrick Riechert</title>
+		<!-- meta tags -->
+		<meta charset="utf-8" />
+		<meta property="og:title" content="Curriculum Vitae / Résumé" />	
+		<meta name="description" content="Curriculum Vitae (CV) / Résumé of Patrick Urs Riechert" />
+		<meta name="robots" content="noindex">
+			<!-- better description above / short bio -->
+		<!-- <meta property="og:image" content="linktocone"> -->
+			<!-- Use custom images for “shareable” pages (e.g., homepage, articles, etc.)
+			Use your logo or any other branded image for the rest of your pages.
+			Use images with a 1.91:1 ratio and minimum recommended dimensions of 1200x630 for optimal clarity across all devices. -->
+		<meta property="og:description" content="Curriculum Vitae (CV) / Résumé of Patrick Urs Riechert" />
+			<!-- better description above / short bio -->
+		<!-- <meta property="og:type" content="website"> -->
+		<!-- <meta property="og:url" content="https://ahrefs.com/blog/open-graph-meta-tags/" /> -->
+		<meta property="og:site_name" content="Github" />
+		<meta property="og:type" content="profile" />
+		<meta property="profile:first_name" content="Patrick">
+		<meta property="profile:last_name" content="Riechert">
+		<meta property="profile:username" content="urs.px">	
+				
+		<!-- style -->
+			<!-- Inter -->
+			<!-- <link rel="preconnect" href="https://fonts.googleapis.com"> 
+			<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+			<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"> -->
+			<!-- B612 -->
+			<!-- <link rel="preconnect" href="https://fonts.googleapis.com"> 
+			<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+			<link href="https://fonts.googleapis.com/css2?family=B612:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"> -->
+			<!-- <link rel="preconnect" href="https://fonts.googleapis.com"> 
+			<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+			<link href="https://fonts.googleapis.com/css2?family=B612+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"> -->
+				
+		<!-- Archivo -->
+		<!-- <link rel="preconnect" href="https://fonts.googleapis.com"> 
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+		<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> -->
+		
+		<!-- b612 -->
+		<!-- <link href="https://fonts.googleapis.com/css2?family=B612&display=swap" rel="stylesheet"> -->
+		
+		<link href="style.css" rel="stylesheet"/>
+		<meta name="theme-color" content="#949292">
+		<!-- former #292727  -->
+		
+		<script src="https://d3js.org/d3.v4.min.js"></script>
+	
+</head>
+<body>
+	<!-- <nav>
+		<a href="#">#</a>
+		<a href="#interests">interests</a>
+		<a href="#education">education</a>
+		<a href="#output">output</a>
+		<a href="#jobs_experience">work</a>
+	</nav> -->
+	
+	<main itemscope itemtype="http://schema.org/Person">
+		<header>
+			<h1 itemprop="name">
+				<span class="irlname">
+					Patrick 
+					<!-- <span class="middle">Urs</span>   -->
+					Riechert
+				</span> 
+				<span class="webname">urs.px</span>
+			</h1>
+
+		<div class="cv_badge">cv</div>
+		</header>
+
+		<section id="bio_about">
+			<!-- <p>Sometimes a researcher sometimes just a pdf collector</p> -->
+			<p>Researching the intersections of politics, cultures, and the digital; particularly interested in the history and mechanics of governing and subjectivation</p>
+	
+		</section>
+		
+		<section id="links">
+			<ul class="platforms">
+				<li><a href="mailto:urs.px@inventati.org">eM</a></li>
+				<li><a href="https://twitter.com/urspx" data-abbr="tw">tw</a></li>
+				<li><a href="http://soundcloud.com/urs-px" data-abbr="sc">sc</a></li>
+				<li><a href="https://github.com/urspx" data-abbr="gh">gh</a></li>
+				<li><a href="https://www.zotero.org/urspx" data-abbr="zo">zo</a></li>
+				<li><a href="https://fu-berlin.academia.edu/PatrickRiechert" data-abbr="ac">ac</a></li>
+			</ul>
+		</section>
+
+		<section id="interests" class="rectobound">
+			<h2>Interests</h2>
+			<p>An array of research interests and obsessions; influences and (hypo)theses. <span class="tip">Mouse over.</span></p>
+			<!-- & influences? of research and more? idk -->
+			
+		</section>
+		
+		<svg id="interests_graph">
+			<!-- filter def/s -->
+			<defs>
+				<linearGradient id="colourToWhite">
+				  <stop offset="0%"   stop-color="#fff000" />
+				  <stop offset="100%" stop-color="#ffffff" />
+				</linearGradient>
+				
+				<line id="dotStroke" stroke-opacity="1" stroke-dasharray="1 4" stroke="rgba(35, 32, 32, 0.77)" stroke-width="1"> </line>
+				
+				<filter id="BokehBlur" color-interpolation-filters="sRGB">
+					  <feGaussianBlur stdDeviation="2" result="blurSource"/>
+					  <feColorMatrix type="luminanceToAlpha"/>
+					  <feComponentTransfer result="brightness-mask" >
+						<feFuncA type="discrete" tableValues="0 0 0 1 1"/>
+						</feComponentTransfer>
+					
+					  
+					 <!--bokeh Layer 1 -->
+					 <feTurbulence type="fractalNoise" seed="1" baseFrequency=".67" numOctaves="3"/>
+					<feColorMatrix type="luminanceToAlpha"/>
+					  <feComponentTransfer>
+						<feFuncA type="discrete" tableValues="0 0 0 1"/>
+					 </feComponentTransfer>
+					  <feComposite operator="in" in="brightness-mask"/>
+					  <feComposite operator="in" in="blurSource"/>
+					
+					  <feMorphology operator="dilate" radius="5"/>
+					  <feGaussianBlur stdDeviation="8"/>
+					  <feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0 
+														   0 0 0 9 0" /> 
+					  <feComponentTransfer result="bokeh1">
+						<feFuncA type="linear" slope=".5" />
+					 </feComponentTransfer>  
+					  
+					  
+					  
+					  <!--bokeh Layer 2 -->
+					 <feTurbulence type="fractalNoise" seed="49" baseFrequency=".67" numOctaves="3"/>
+					<feColorMatrix type="luminanceToAlpha"/>
+					  <feComponentTransfer>
+						<feFuncA type="discrete" tableValues="0 0 0 1"/>
+					 </feComponentTransfer>
+					  <feComposite operator="in" in="brightness-mask"/>
+					  <feComposite operator="in" in="blurSource"/>
+					
+					  <feMorphology operator="dilate" radius="10"/>
+					  <feGaussianBlur stdDeviation="12"/>
+					  <feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0 
+														   0 0 0 15 0" /> 
+					  <feComponentTransfer result="bokeh2">
+						<feFuncA type="linear" slope=".3" />
+					 </feComponentTransfer>  
+					  
+					<!--bokeh Layer 3 -->
+					  
+					<feTurbulence type="fractalNoise" seed="44" baseFrequency=".67" numOctaves="3"/>
+					<feColorMatrix type="luminanceToAlpha"/>
+					  <feComponentTransfer>
+						<feFuncA type="discrete" tableValues="0 0 0 1"/>
+					 </feComponentTransfer>
+					  <feComposite operator="in" in="brightness-mask"/>
+					  <feComposite operator="in" in="blurSource"/>
+					
+					  <feMorphology operator="dilate" radius="10"/>
+					  <feGaussianBlur stdDeviation="18"/>
+					  <feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0 
+														   0 0 0 15 0" /> 
+					  <feComponentTransfer result="bokeh3">
+						<feFuncA type="linear" slope=".2" />
+					 </feComponentTransfer>  
+					  
+					<!--Merge -->
+					 <feBlend mode="multiply" in="bokeh3" in2="bokeh2"/>
+					 <feBlend mode="lighten" in2="bokeh1"/>
+					  
+					  <feMorphology operator="erode" radius="0" result="bokeh"/>   
+					  <feGaussianBlur stdDeviation="9" in="SourceGraphic"/>
+					  <feComposite operator="over" in="bokeh"/> 
+					  <feComposite operator="in" in2="SourceGraphic"/>
+				
+				</filter>
+		  </defs>
+		</svg>
+
+		<section id="current">
+			<h2>Work in progress / current projects</h2>
+			<ul id="wip_projects">
+				<li>MA Thesis</li>
+				<li>Scenes of extimacy revision</li>
+				<li>Epistemic complicity and rampant machinism</li>
+			</ul>
+		</section>
+		
+		<section id="education">
+			<h2>Education</h2>
+			<details>
+			  <summary>
+				<span itemprop="memberOf" itemscope itemtype="http://schema.org/EducationalOrganization">
+				  <link href="https://www.fu-berlin.de" itemprop="url">
+				  <span itemprop="name">Freie Universität Berlin</span>
+				</span> 
+				<time>2013–2014; 2015–2022</time>
+			  </summary>
+			  Political Science
+			</details>
+			<details>
+			  <summary>
+				<span itemprop="alumniOf" itemscope itemtype="http://schema.org/EducationalOrganization">
+				  <link href="http://www.macalester.edu" itemprop="url">
+				  <span itemprop="name">Macalester College</span>
+				</span> 
+				<time>2011–2015</time>
+			  </summary>
+			  Major: Political Science. Minor: Media and Cultural Studies. Concentration: Critical Theory. 
+			</details>
+		  </section>
+	
+		<section id="output">
+			<h2>Publications &amp; presentations</h2>
+			<ul class="csl-bib-body" >
+			  <li class="csl-entry">Riechert, Patrick. ‘Dispositif &amp; Interface’. Guest lecture presented at the Was ist ein Dispositiv? [Seminar, Mathias Schönher], Leuphana Universität Lüneburg, July 2020.</li>
+			  <span class="Z3988" title="url_ver=Z39.88-2004&amp;ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fzotero.org%3A2&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc&amp;rft.type=presentation&amp;rft.title=Dispositif%20%26%20interface&amp;rft.rights=All%20rights%20reserved&amp;rft.aufirst=Patrick&amp;rft.aulast=Riechert&amp;rft.au=Patrick%20Riechert&amp;rft.date=2020-07"></span>
+			  <li class="csl-entry">Riechert, Patrick Urs, and Elena Vogman. ‘Machinic Extimacy’. In <em>Intersubjectivity. Relative Intimacies</em>, edited by Lou Cantor, 3:120–32. Berlin: Sternberg Press, 2021.</li>
+			  <span class="Z3988" title="url_ver=Z39.88-2004&amp;ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fzotero.org%3A2&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.atitle=Machinic%20Extimacy&amp;rft.place=Berlin&amp;rft.publisher=Sternberg%20Press&amp;rft.aufirst=Patrick%20Urs&amp;rft.aulast=Riechert&amp;rft.au=Patrick%20Urs%20Riechert&amp;rft.au=Elena%20Vogman&amp;rft.au=undefined&amp;rft.date=2021&amp;rft.pages=120%E2%80%93132&amp;rft.spage=120&amp;rft.epage=132"></span>
+			  <li class="csl-entry">———. ‘Scenes of Extimacy’. Multimedia lecture presented at the Work Hard! Play Hard!, June 2020. <a href="http://workhardplay.pw/en/2020">http://workhardplay.pw/en/2020</a>.</li>
+			  <span class="Z3988" title="url_ver=Z39.88-2004&amp;ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fzotero.org%3A2&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc&amp;rft.type=presentation&amp;rft.title=Scenes%20of%20Extimacy&amp;rft.rights=All%20rights%20reserved&amp;rft.identifier=http%3A%2F%2Fworkhardplay.pw%2Fen%2F2020&amp;rft.aufirst=Patrick%20Urs&amp;rft.aulast=Riechert&amp;rft.au=Patrick%20Urs%20Riechert&amp;rft.au=Elena%20Vogman&amp;rft.date=2020-06"></span>
+			  <li class="csl-entry">Vogman, Elena, and Patrick Urs Riechert. ‘Crystal Words’. Sgomento Zurigo, 2022.</li>
+			  <span class="Z3988" title="url_ver=Z39.88-2004&amp;ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fzotero.org%3A2&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc&amp;rft.type=document&amp;rft.title=Crystal%20words&amp;rft.rights=All%20rights%20reserved&amp;rft.publisher=Sgomento%20Zurigo&amp;rft.aufirst=Elena&amp;rft.aulast=Vogman&amp;rft.au=Elena%20Vogman&amp;rft.au=Patrick%20Urs%20Riechert&amp;rft.date=2022"></span>
+			  <li class="csl-entry">Wrzesinski, Marcel, Patrick Urs Riechert, Frédéric Dubois, and Christian Katzenbach. ‘Working with Publication Technology to Make Open Access Journals Sustainable’. White Paper. HIIG Discussion Paper Series. Alexander von Humboldt Institut für Internet und Gesellschaft, 25 February 2021. <a href="https://doi.org/10.5281/zenodo.4558780">https://doi.org/10.5281/zenodo.4558780</a>.</li>
+			  <span class="Z3988" title="url_ver=Z39.88-2004&amp;ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fzotero.org%3A2&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=report&amp;rft.series=HIIG%20Discussion%20Paper%20Series&amp;rft.btitle=Working%20with%20publication%20technology%20to%20make%20open%20access%20journals%20sustainable&amp;rft.aufirst=Marcel&amp;rft.aulast=Wrzesinski&amp;rft.au=Marcel%20Wrzesinski&amp;rft.au=Patrick%20Urs%20Riechert&amp;rft.au=Fr%C3%A9d%C3%A9ric%20Dubois&amp;rft.au=Christian%20Katzenbach&amp;rft.date=2021-02-25&amp;rft.language=en"></span>
+			</ul>
+		</section>
+		
+		<section id="jobs_experience">
+			<h2>Employment &amp; internships</h2>
+			<section>
+				<h3>Positions</h3>
+				<ul>
+				<li>2016–2021: Student assistant, <a href="https://policyreview.info">Internet Policy Review</a>, Alexander von Humboldt Institut für Internet und Gesellschaft, Berlin, DE
+				
+				<ul>
+				<li>Design and implementation of new features; technical maintenance; workflow automation; participating in executing the OpenAIRE and InnOAccess projects; preparation of articles for publishing; representation at conferences; production of promotional materials.</li>
+				</ul>
+				</li>
+				<li>2020.10–2021.05: Grading assistant, New York University, Shanghai, CN / New York, US [remote].</li>
+				<li>2017.03–2019.05: Contracted student assistant, DFG-Project <a href="https://rhythmusundprojektion.com">Rhythm and Projection. Thinking Possibility in the Soviet Avant-garde</a>, Peter Szondi-Institut for General and Comparative Literature, Freie Universität, Berlin, DE
+				
+				<ul>
+				<li>Project of Elena Vogman: “Anthropologies of Rhythm.” Translation, editing, and further work.</li>
+				</ul>
+				</li>
+				<li>2016.04–2016.06: Intern, Global Internet Politics, <a href="https://www.gppi.net">Global Public Policy Institute</a>, Berlin, DE
+				
+				<ul>
+				<li>Researched and prepared materials on encryption, security in Open Source Software, and cyber capacity building; administrative work for Transatlantic Digital Dialogues event.</li>
+				</ul>
+				</li>
+				<li>2015.08–2015.12: Assistant, Mac &amp; PC Station, Saint Paul, MN, USA
+				
+				<ul>
+				<li>Repaired cell phones, tablets, and other devices; coordinated with suppliers; website work.</li>
+				</ul>
+				</li>
+				<li>2014.09–2015.05; 2015.09–2015.12: Office assistant, German and Russian Department, Macalester College, Saint Paul, MN, USA</li>
+				<li>10.2013–08.2014: Intern, <a href="https://digitalegesellschaft.de">Digitale Gesellschaft e.V.</a>, Berlin, DE
+			
+				<ul>
+				<li>Research, creation of promotional &amp; campaign materials, editing, organisational work.</li>
+				</ul>
+				</li>
+				</ul>
+
+			</section>
+			<section>
+				<h3>Editing/proofreading</h3>
+				<h4>Monographs:</h4>
+				
+				<ul>
+				<li>Elena Vogman. (2019). Dance of Values: Sergei Eisenstein’s Capital Project. Berlin: Diaphanes</li>
+				<li>Marie Rebecchi &amp; Elena Vogman. (2017). Sergei Eisenstein and the Anthropology of Rhythm. Rome: Nero.</li></ul>
+				
+				<h4>Articles, academic projects and research publications:</h4>
+				<ul>
+				<li>Elena Vogman. (2019). Madness, Media, Milieus. Reconfiguring the Humanities in Postwar Europe [VolkswagenStiftung “Freigeist” Grant application, successful].</li>
+				<li>Elena Vogman. (2019). Critical Morphologies and Maritime Milieus. Jean Epstein, Hubert Fichte and Leonore Mau. Diaphanes Magazine, 7.</li>
+				<li>Elena Vogman. (2018). Dance of Values: Reading Eisenstein’s Capital. Grey Room, (72), 94–124. <a href="https://doi.org/10.1162/grey_a_00251">https://doi.org/10.1162/grey_a_00251</a></li>
+				<li>Elena Vogman. (2017). Dynamography, or Andrei Bely’s Rhythmic Gesture. Diaphanes Magazine, 3. <a href="https://www.diaphanes.com/titel/dynamography-or-andrei-belys-%20rhythmic-gesture-5335">https://www.diaphanes.com/titel/dynamography-or-andrei-belys- rhythmic-gesture-5335</a></li>
+				<li>Elena Vogman &amp; Clemens von Wedemeyer. (2017). Actors of Profane History [short film].</li>
+				<li>Wolfie Christl. (2017). Corporate Surveillance in Everyday Life: How Companies Collect, Combine, Analyze, Trade, and Use Personal Data on Billions [Report]. Vienna: Cracked Labs. <a href="https://crackedlabs.org/en/corporate-surveillance">https://crackedlabs.org/en/corporate-surveillance</a></li>
+				</ul>
+
+			</section>
+		</section>		
+		
+		
+	</main>
+		<script src="forcegraph.js"></script>
+		
+</body>	
+</html>
+	

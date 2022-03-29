@@ -1,0 +1,304 @@
+:root {
+    /* --basic-width: 630pt; */
+    --basic-width: 840px;
+    --basic-size-unit: 20px;
+    --text-color: rgba(35, 32, 32, 0.77);
+    --textGrid-unit: 20pt;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Helvetica Neue", "Helvetica", sans-serif;
+    /* font-family: "Archivo", sans-serif; */
+    /* font-size: calc(var(--textGrid-unit)*0.50); */
+    font-size: 14px;
+    line-height: var(--basic-size-unit);
+    padding: 0;
+    margin: 0;
+    color: var(--text-color);
+    background-color: rgba(189, 189, 189, 1);
+    background-image: radial-gradient(rgba(250, 249, 249, 1) 1px, hsla(360, 3%, 93%, 0) 1px), radial-gradient(18% 28% at 24% 50%, hsla(186, 100%, 90%, 1) 7%, hsla(228, 100%, 51%, 0) 100%), radial-gradient(18% 28% at 18% 71%, hsla(0, 0%, 100%, 0.349) 6%, hsla(228, 100%, 51%, 0) 100%), radial-gradient(70% 53% at 36% 76%, hsla(198, 6%, 55%, 0.549) 0%, hsla(228, 100%, 51%, 0) 100%), radial-gradient(42% 53% at 15% 94%, rgba(255, 255, 255, 1) 7%, hsla(228, 100%, 51%, 0) 100%), radial-gradient(42% 53% at 34% 72%, rgba(255, 255, 255, 1) 7%, hsla(228, 100%, 51%, 0) 100%), radial-gradient(18% 28% at 35% 87%, hsla(0, 0%, 100%, 1) 7%, hsla(228, 100%, 51%, 0) 100%), radial-gradient(31% 43% at 7% 98%, hsla(0, 0%, 100%, 1) 24%, hsla(228, 100%, 51%, 0) 100%), radial-gradient(21% 37% at 72% 23%, hsla(81, 17%, 77%, 0.612) 24%, hsla(228, 100%, 51%, 0) 100%), radial-gradient(35% 56% at 91% 74%, hsla(258, 77%, 97%, 0.961) 9%, hsla(228, 100%, 51%, 0) 100%), radial-gradient(74% 86% at 67% 38%, hsla(132, 3%, 63%, 0.961) 24%, hsla(228, 100%, 51%, 0) 100%), linear-gradient(0deg, hsla(360, 2%, 87%, 1) 0%, hsla(360, 3%, 93%, 1) 100%);
+    background-origin: border-box;
+    background-size: 20px 20px, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%;
+    background-position: 14px 11px, 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
+    /* background-attachment: fixed;		 */
+    background-attachment: scroll;
+}
+
+/* https://www.magicpattern.design/tools/css-backgrounds */
+nav {
+    display: flex;
+    position: fixed;
+    width: var(--basic-width);
+    margin-left: calc(100% - var(--basic-width) /2);
+    margin-right: auto;
+    z-index: 100;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+main {
+    display: grid;
+    /* grid-template-columns: 1fr repeat(7, 2fr) 1fr; */
+    grid-template-columns: calc(var(--basic-size-unit)*3) repeat(7, 1fr) calc(var(--basic-size-unit)*3);
+
+    /* grid-template-rows: calc(var(--basic-width) /10) auto calc(var(--basic-width) /10 * 3) auto auto auto; */
+    grid-template-rows: calc(var(--basic-size-unit)*3) calc(var(--basic-size-unit)*3) calc(var(--basic-size-unit) * 3) calc(var(--basic-size-unit) * 15) auto auto auto;
+    grid-auto-flow: row;
+    
+    background-size: 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 20px 20px;
+    background-origin: border-box;
+    background-position: 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px, 10px 11px;
+    /* background-attachment: scroll, scroll, scroll, scroll, scroll, scroll, scroll, scroll, scroll, fixed; */
+    background-attachment: scroll;
+    background-image: radial-gradient(29% 32% at 3% 6%, rgba(197, 251, 212, 0.3) 7%, rgba(7, 58, 255, 0) 100%), 
+        radial-gradient(18% 28% at 93% 1%, rgba(255, 255, 255, 0.349) 6%, rgba(7, 58, 255, 0) 100%), 
+        radial-gradient(42% 53% at 15% 94%, #faf9f9 7%, rgba(7, 58, 255, 0) 100%), 
+        radial-gradient(42% 53% at 34% 72%, #faf9f9 7%, rgba(7, 58, 255, 0) 100%), 
+        radial-gradient(18% 28% at 39% 97%, #faf9f9 7%, rgba(7, 58, 255, 0) 93%), 
+        radial-gradient(19% 74% at 5% 57%, #faf9f9 7%, rgba(5, 55, 255, 0) 93%), 
+        radial-gradient(31% 43% at 7% 98%, rgba(255, 255, 255, 1) 24%, rgba(5, 55, 255, 0) 100%), 
+        radial-gradient(35% 56% at 91% 74%, rgba(250, 247, 253, 0.878) 9%, rgba(5, 55, 255, 0) 100%), 
+        radial-gradient(74% 86% at 69% 13%, rgba(240, 255, 252, 0.961) 24%, rgba(5, 55, 255, 0) 100%), 
+        radial-gradient(#949292 1px, #faf9f9 1px);
+    
+    width: var(--basic-width);
+    margin-top: calc(var(--basic-size-unit)*7);
+    /* margin */
+    padding-bottom: calc(var(--basic-size-unit)*7);
+
+    margin-left: auto;
+    margin-right: auto;
+    
+    box-shadow: 0 calc(var(--basic-width)/10/2) calc(var(--basic-width)/10/1.5) calc(var(--basic-width)/10/2*-1) rgba(26, 24, 24, 0.67);
+    border: 1px solid #fff;
+}
+
+header {
+/*  padding-top: calc(var(--basic-width) /10/2); */
+    /* padding-left: calc(var(--basic-width) /10);
+    padding-right: calc(var(--basic-width) /10); */
+    /* border-bottom: 1px solid rgba(250, 249, 249, 0.607); */
+    grid-column-start: 2;
+    grid-column-end: 10;
+    grid-row-start: 2;
+    /* position: sticky; */
+    
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+/* recreate the CV badge later */
+
+header .cv_badge {
+    justify-self: end;
+}
+
+header h1 span[itemprop="name"] .irlname .middle {
+    display: none;
+}
+
+header h1 {
+    letter-spacing: -1px;
+    margin-top: 0;
+}
+
+header h1 :not(.webname) {
+    font-weight: 800;
+}
+
+header h1 .webname {
+    font-weight: 400;
+}
+
+header h1 .webname::before {
+    /* content: "// "; */
+    content: "| ";
+}
+
+/* header ul.platforms {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+} */
+
+section#bio_about {
+    grid-row-start: 3;
+    grid-column-start: 2;
+    grid-column-end: 7;
+}
+
+section#links {
+    grid-row-start: 3;
+    grid-column-start: 7;
+    grid-column-end: 9;
+}
+
+section#links ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+
+/* svg / d3 / graph */
+section#interests {
+    grid-row: 4;
+    grid-column-start: 2;
+    grid-column-end: 10;
+    padding: 0;
+    margin: 0;
+    z-index: 20;
+    align-self: start;
+}
+
+section#interests h2 {
+    /* grid-ro */
+    /* margin-left: calc(var(--basic-size-unit) *3); */
+}
+
+svg#interests_graph {
+    z-index: 10;
+    grid-row: 4;
+    grid-column-start: 1;
+    grid-column-end: 11;
+    align-self: end;
+    
+    padding: 0;
+    margin: 0;
+    
+    width: 100%;
+    
+    height: 100%;
+    /* border-bottom: 1px solid #fff; */
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    /* box-shadow: inset 0 1px rgba(98, 98, 98, 0.4); */
+    /* box-shadow: inset 0 calc(var(--basic-width)/10/8*-1) calc(var(--basic-width)/10/8) rgba(26, 24, 24, 0.16); */
+    
+    /* background-color: rgba(250, 249, 249, 1); */
+    background-image: radial-gradient(70% 60% at 22% 09%, #faf9f9FF 0%, #073AFF00 100%),radial-gradient(86% 30% at 87% 86%, #faf9f9F5 13%, #073AFF00 100%), radial-gradient(rgba(147, 146, 146, 0.799) 1px, #faf9f9 1px);
+    background-size: 100% 100%, 100% 100%, 20px 20px;
+    background-origin: border-box;
+    background-position: 0px 0px, 0px 0px, 9px 12px;
+    background-blend-mode: normal; 
+
+
+    
+    /* background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
+    background-image: radial-gradient(29% 32% at 3% 6%, #CEFAFFFF 7%, #073AFF00 100%), radial-gradient(18% 28% at 93% 1%, #FFFFFF59 6%, #073AFF00 100%), radial-gradient(42% 53% at 15% 94%, #FFFFFFFF 7%, #073AFF00 100%), radial-gradient(42% 53% at 34% 72%, #FFFFFFFF 7%, #073AFF00 100%), radial-gradient(18% 28% at 39% 97%, #FFFFFFFF 7%, #073AFF00 93%), radial-gradient(19% 74% at 5% 57%, #FFFFFFFF 7%, #073AFF00 93%), radial-gradient(31% 43% at 7% 98%, #FFFFFFFF 24%, #073AFF00 100%), radial-gradient(35% 56% at 91% 74%, #FAF6FDE0 9%, #073AFF00 100%), radial-gradient(74% 86% at 69% 13%, #AAFFF396 24%, #073AFF00 100%);
+    background-blend-mode: difference; */
+}
+
+svg .links line {
+    /* stroke: url(#dotStroke); */
+}
+
+svg .nodes circle {
+    /* stroke: #f0f0f0;
+      stroke-width: 1.5px; */
+    /* mix-blend-mode: color; */
+    /* stroke: var(--text-color); */
+    fill: rgba(0,0,0,0);
+}
+
+svg text.label {
+    font-family: "Helvetica Neue", "Helvetica";
+    fill: var(--text-color);
+    text-transform: uppercase;
+    opacity: 0;
+}
+
+svg text.label:hover {
+    opacity: 1;
+}
+
+/* sections */
+section {
+    /* margin-left: calc(var(--basic-width) /10); */
+}
+
+section:not(.rectobound) {
+    grid-column: 2 / 6;
+}
+
+section#current {
+    /* grid-row: 4; */
+    display: none;
+}
+
+section#education {
+    grid-row-start: 5;
+    /* margin-top: calc((var(--basic-width) /10 * 3) * .1); */
+}
+
+section#output {
+    grid-row-start: 6;
+}
+
+section#jobs_experience {
+    grid-row-start: 7;
+}
+
+section#output ul, section#jobs_experience ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+}
+
+#output ul li, #jobs_experience ul li {
+    margin-bottom: 1em;
+}
+
+#output ul li#machinicExtimacy {
+    order: -1;
+}
+
+section section {
+    margin-left: 0;
+}
+
+section#jobs_experience ul li ul li {
+    margin-left: 20px;
+}
+
+/* ay bruh idk */
+section #links {
+    justify-self: end;
+    text-align: right;
+    /* visibility: collapse; */
+}
+
+#links  ul.platforms {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+}
+
+#links .platforms ul li {
+    display: block;
+}
+
+#links .platforms a {
+    /* visibility: collapse; */
+    background-color: #8ca1a3;
+    display: block;
+    height: 20px;
+    width: 20px;
+    /* mix-blend-mode: color; */
+    
+    font-size: 10px;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    color: rgba(250, 249, 248, 1);
+}
+
+#links .platforms a:hover {
+    background-color: rgba(163, 140, 157, 1)
+}
