@@ -50,6 +50,7 @@
     ],
     "links": [
         { "source": "dispositif", "target": "affordance", "value": 1 },
+        { "source": "dispositif", "target": "assemblage", "value": 1 },
         { "source": "dispositif", "target": "governmentality", "value": 1 },
         { "source": "dividual", "target": "derivatives", "value": 8 },
         { "source": "knowledge visualisation", "target": "derivatives", "value": 8 },
@@ -72,6 +73,9 @@
         { "source": "MDMA :: MIDI", "target": "rave", "value": 5 },
         { "source": "rave as alternative modernity", "target": "rave", "value": 5 },
         { "source": "extimacy", "target": "rave", "value": 10 },
+        { "source": "extimacy", "target": "supple technology", "value": 10 },
+        { "source": "extimacy", "target": "MDMA :: MIDI", "value": 10 },
+        { "source": "n-dimensional spatiality", "target": "MDMA :: MIDI", "value": 10 },
         { "source": "extimacy", "target": "LSD :: GUI", "value": 10 },
         { "source": "extimacy", "target": "Institutional Psychotherapy", "value": 10 },
         { "source": "extimacy", "target": "information as universal solvent", "value": 10 },
@@ -86,6 +90,9 @@
         { "source": "individuation", "target": "information as universal solvent", "value": 10 },
         { "source": "platform communism", "target": "market design", "value": 10 },
         { "source": "market design", "target": "milieu", "value": 6 },
-        { "source": "market design", "target": "neoliberalism", "value": 6 }
+        { "source": "market design", "target": "neoliberalism", "value": 6 },
+        { "source": "theory of the firm", "target": "individuation", "value": 6 },
+        { "source": "environmental regulation", "target": "individuation", "value": 6 }
+
     ]
 }

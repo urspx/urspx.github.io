@@ -206,13 +206,25 @@ svg .nodes circle {
 
 svg text.label {
     font-family: "Helvetica Neue", "Helvetica";
+    font-weight: 800;
     fill: var(--text-color);
     text-transform: uppercase;
     opacity: 0;
+    /* stroke: rgba(250, 249, 249, 1); */
+    /* mix-blend-mode: exclusion; */
+    
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 svg text.label:hover {
     opacity: 1;
+    pointer-events: none;
+
 }
 
 /* sections */
@@ -266,13 +278,18 @@ section#jobs_experience ul li ul li {
 }
 
 /* ay bruh idk */
-section #links {
+section#links {
+    
     justify-self: end;
-    text-align: right;
+    grid-column-start: 7;
+    grid-column-end: 9;
+    
     /* visibility: collapse; */
 }
 
 #links  ul.platforms {
+    margin: 0;
+    padding: 0;
     list-style: none;
     display: flex;
     flex-wrap: wrap;
@@ -300,5 +317,11 @@ section #links {
 }
 
 #links .platforms a:hover {
-    background-color: rgba(163, 140, 157, 1)
+    background-color: rgba(163, 140, 157, 1);
+    box-shadow: 0 0 10px #fff;
+    text-shadow: 0 0 5px #fff; 
+}
+
+section a {
+    
 }
