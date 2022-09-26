@@ -74,6 +74,28 @@ main {
     border: 1px solid #fff;
 }
 
+h2 {
+    line-height: var(--basic-size-unit);
+    font-size: var(--basic-size-unit);
+    margin-top: var(--basic-size-unit);
+    margin-bottom: var(--basic-size-unit);
+}
+
+h3,h4,ul {
+    margin-top: var(--basic-size-unit);
+    margin-bottom: var(--basic-size-unit);    
+}
+
+ul li ul {
+    margin-top: calc(var(--basic-size-unit)/2);
+    margin-bottom: calc(var(--basic-size-unit)/2);        
+}
+
+p, ul li {
+    margin-top: 0;
+    margin-bottom: var(--basic-size-unit);    
+}
+
 header {
 /*  padding-top: calc(var(--basic-width) /10/2); */
     /* padding-left: calc(var(--basic-width) /10);
@@ -122,6 +144,26 @@ header h1 .webname::before {
     display: flex;
     flex-direction: row;
 } */
+
+main a {
+    background-color: lightgrey;
+/*     mix-blend-mode: difference; */
+    background: #eeeeee; /* Old browsers */
+    background: linear-gradient(to bottom, #adb1ab 0%, #8e8c8c 5%,#383c3a 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    mix-blend-mode: difference;
+    color: #090604;
+    text-decoration: none;
+}
+
+main a:hover {
+    mix-blend-mode: difference;
+    background: linear-gradient(to top, #adb1ab 0%, #8e8c8c 5%,#383c3a 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    transition: background;
+}
+
+main a:visited {
+    text-decoration: line-through solid black 1px;
+}
 
 section#bio_about {
     grid-row-start: 3;
@@ -237,8 +279,10 @@ section:not(.rectobound) {
 }
 
 section#current {
-    /* grid-row: 4; */
-    display: none;
+    grid-row: 6;
+    grid-column-start: 7;
+    grid-column-end: 9;
+    /*! display: none; */
 }
 
 section#education {
@@ -254,7 +298,25 @@ section#jobs_experience {
     grid-row-start: 7;
 }
 
-section#output ul, section#jobs_experience ul {
+section#ps {
+    grid-row-start: 8;
+/*     display: none; */
+    filter: blur(20px);
+        transition: 2s;
+
+}
+
+section#ps:hover, section#ps:active {
+    filter: blur(0px);
+    transition: 2s;
+}
+
+section#ps h2 {
+     font-style: italic;
+
+}
+
+section#output ul, section#jobs_experience ul, section#current ul, section ul {
     list-style: none;
     display: flex;
     flex-direction: column;
@@ -262,11 +324,11 @@ section#output ul, section#jobs_experience ul {
 }
 
 #output ul li, #jobs_experience ul li {
-    margin-bottom: 1em;
+/*     margin-bottom: var(--basic-size-unit); */
 }
 
 #output ul li#machinicExtimacy {
-    order: -1;
+/*     order: -1; */
 }
 
 section section {
@@ -320,8 +382,4 @@ section#links {
     background-color: rgba(163, 140, 157, 1);
     box-shadow: 0 0 10px #fff;
     text-shadow: 0 0 5px #fff; 
-}
-
-section a {
-    
 }
