@@ -46,6 +46,8 @@
         { "id": "market as information processor", "group": 2 },
         { "id": "epistemic complicity", "group": 2 },
         { "id": "neoliberalism", "group": 3 },
+        { "id": "gamification", "group": 3 }, 
+        { "id": "psychometrics", "group": 3 }, 
         { "id": "extimacy", "group": 9 }
     ],
     "links": [
