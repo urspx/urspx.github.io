@@ -72,6 +72,7 @@ main {
     
     box-shadow: 0 calc(var(--basic-width)/10/2) calc(var(--basic-width)/10/1.5) calc(var(--basic-width)/10/2*-1) rgba(26, 24, 24, 0.67);
     border: 1px solid #fff;
+    outline: 1px solid #0000001c;
 }
 
 h2 {
