@@ -1,0 +1,8 @@
+typography:
+  fonts:
+    - family: Syne
+      source: google
+    - family: Syne Mono
+      source: google
+  base: Syne
+  headings: Syne Mono

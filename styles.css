@@ -1,0 +1,11 @@
+html {
+    background-color: #c5c5c5;
+}
+
+body {
+    background-image: url(res/gradient-mesh-1.svg);
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-color: #c5c5c5;
+}

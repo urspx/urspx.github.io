@@ -1,0 +1,16 @@
+project:
+  type: website
+
+website:
+  title: "px"
+  navbar:
+    left:
+      - href: index.qmd
+        text: this
+      # - about.qmd
+
+format:
+  html:
+    css: styles.css
+    theme: pulse
+    # toc: true
